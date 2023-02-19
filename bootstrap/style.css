@@ -15,3 +15,36 @@ body{
     opacity: 1;
 
 }
+.sidebar li.active{
+    background: #eee;
+    border-radius: 8px;
+
+}
+.sidebar li:hover{
+    background: #eeeeee2e;
+    border-radius: 8px;
+    
+}
+.sidebar li.active a, .sidebar li.active a:hover{
+    color: #000;
+}
+.sidebar li a{
+    color:#fff;
+}
+.sidebar_footer{
+    
+        position: fixed;
+        bottom: 0;
+      
+}
+@media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: fixed;
+        min-height:100vh;
+        z-index: 1;
+    }
+    #side_nav.active{
+        margin-left: 0;
+    }
+}

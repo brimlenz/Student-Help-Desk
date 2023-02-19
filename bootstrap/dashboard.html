@@ -12,25 +12,51 @@
   <body>
   <div class="main-container d-flex">
     <div class="sidebar" id="side_nav">
-      <div class="header-box px-2 pt-3 pb-4">
-        <img src="../logos/user.png" width="30" height="30" alt="logo" class="d-inline-block align-text-top">
-         <h1 class="fs-4 text-light d-inline-block align-text-top">Help Desk</h1>
-         <button class="btn d-md-none d-inline-block justify-end close-btn px-1 py-0 text-light"> <i class="fa-solid fa-bars-staggered"></i> </button>
+      <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-betweeen">
+        <img src="../logos/user.png" width="30" height="30" alt="logo" class="d-inline-block align-text-top m-1">
+         <h1 class="fs-4 text-light d-inline-block align-text-top px-2">Help Desk</h1>
+         <button class="btn d-md-none d-inline-block justify-end close-btn px-1 py-0 text-light justify-content-betweeen"> <i class="fa fa-bars" aria-hidden="true"></i></button>
       </div>
 
       <ul class="list-unstyled px-2">
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-house-user"></i> Dashboard</a></li>
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-ticket"></i> Submit a Ticket</a></li>
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-list-ul"></i> All Tickets</a></li>
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-compass"></i> How to Submit a Ticket</a></li>
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-clipboard-question"></i> FAQ's</a></li>
-        <li class=""><a href="#" class="text-decoration-none"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        <li class="active"><a href="#Dashboard" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-house-user"></i> Dashboard</a></li>
+        <li class=""><a href="#Submit a Ticket" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-ticket"></i> Submit a Ticket</a></li>
+        <li class=""><a href="#All Tickets" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-list-ul"></i> All Tickets</a></li>
+        <li class=""><a href="#How to Submit a Ticket" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-compass"></i> How to Submit a Ticket</a></li>
+        <li class=""><a href="#FAQ's" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-clipboard-question"></i> FAQ's</a></li>
+        
         
       </ul>
+      <div class="fixed-bottom ">
+
       <hr class="h-color mx-2">
+
+      <ul class="list-unstyled px-2">
+        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block active"> <i class="fa fa-line-chart" aria-hidden="true"></i> Reports</a></li>
+        <li class=""><a href="#Settings" class="text-decoration-none px-3 py-2 d-block"> <i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+        <li class=""><a href="#Logout" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+      </ul>
+      
+    </div>
     </div> 
     <div class="content">
-
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between d-md-none d-block">
+          <a class="navbar-brand fs-4" href="#">Help Desk</a>
+          <button class="btn px-1 py-0 open-btn"> <i class="fa fa-bars" aria-hidden="true"></i> </button>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </div>
   </div>
         
@@ -47,7 +73,21 @@
 
 
 
-
+<!--Script for the sidebar-->
+<script>
+ sidebar = document.querySelector(".sidebar").querySelectorAll("li");
+ console.log(sidebar);
+ sidebar.forEach(element => {
+  element.addEventListener("click", function(){
+    sidebar.forEach(sidebar=>sidebar.classList.remove("active"))
+    this.classList.add("active")
+  })
+ });
+  $('open-btn').on('click', function(){
+    $('.sidebar').addClass('active');
+  })
+  
+</script>
 
 
 
@@ -56,5 +96,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ff7fc15562.js" crossorigin="anonymous"></script>
+
+    
   </body>
 </html>
