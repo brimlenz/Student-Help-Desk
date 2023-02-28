@@ -72,12 +72,58 @@
                     <label class="form-label" for="Faculty">Faculty</label>
                     <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
                     <select class="form-select" aria-label="Default select example" required>
-                        <option value="" disabled selected hidden>Click here to select the faculty you belong to.</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="" disabled selected hidden>Select your Faculty</option>
+                        <option value="1">Computing and Information Technology</option>
+                        <option value="2">Engineering and Technology</option>
+                        <option value="3">Science and Technology</option>
+                        <option value="4">Business and Economics</option>
+                        <option value="5"> Media and Communication</option>
                       </select>
                 </div>
+
+                <div class="form-outline contents">
+                    <label class="form-label" for="Department">Department</label>
+                    <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+                    <select class="form-select" aria-label="Default select example" required>
+                        <option value="" disabled selected hidden>Select your Department</option>
+                        <option value="1" class="FOCIT">Information Technology</option>
+                        <option value="2" class="FOCIT" >Computer Science</option>
+                        <option value="3" class="FOET">Electrical & Communication Engineering</option>
+                        <option value="4" class="FOET">Civil Engineering</option>
+                        <option value="5" class="FOET">Mechanical & Mechatronics Engineering</option>
+                        <option value="6" class="FOST">Chemistry</option>
+                        <option value="7" class="FOST">Mathematics</option>
+                        <option value="8" class="FOST">Physics</option>
+                        <option value="9" class="FOBE">Finance & Accounting</option>
+                        <option value="10" class="FOBE">Marketing & Management</option>
+                        <option value="11" class="FOBE">Procurement & Logistics Management</option>
+                        <option value="12" class="FAMECO">Journalism & Communication</option>
+                        <option value="13" class="FAMECO">Film Production & Broadcasting</option>
+                      </select>
+                </div>
+
+                <div class="form-outline contents">
+                    <label class="form-label" for="Subject">Subject</label>
+                    <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Write the subject of your request Maximum 20 words"></i>
+                    <input type="text" id="subject" class="form-control form-icon-trailing" placeholder="e.g Issues Accessing My Portal" />
+                </div>
+
+                <div class="form-outline contents">
+                    <label class="form-label" for="Description">Description</label>
+                    <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Write in detail your Request/ Issue here"></i>
+                    <textarea name="Description" id="description" cols="30" rows="10"> </textarea>
+                    <p class="ms-2">Please describe your concern as much as possible. The more details you provide, the better we can assist you.</p>
+                </div>
+
+                <div class="form-outline contents mb-3">
+                    <label for="formFile" class="form-label">Screenshot Attachments</label>
+                    <input class="form-control" type="file" id="formFile" multiple>
+                  </div>
+
+                <div class="form-outline contents mb-3">
+                    
+                    <button type="submit">Submit Request</button>
+                  </div>
 
             </form>
           
@@ -129,5 +175,7 @@
    
    
  </script>
+ <!--Department-->
+ 
   </body>
 </html>
