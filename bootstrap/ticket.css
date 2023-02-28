@@ -1,0 +1,67 @@
+.request{
+    width: 96%;
+    margin: 30px 0 30px 30px;
+    overflow:auto;
+    background: #fff;
+    border-radius: 8px;
+}
+.i-name{
+    color: #444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.request h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.request label{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    
+    padding: 0 0 0 10px;
+}
+
+.contents{
+    margin-bottom: 40px;
+}
+
+
+.request i{
+    
+    color: #444a53;
+}
+.request .contents input{
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #01baef
+}
+.request .contents select{
+    
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #01baef
+    
+}
+
+select:required:invalid {
+    color: gray;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: black;
+  }
