@@ -204,5 +204,14 @@ tbody tr td{
     thead {
         border-radius: 5px;
     }
+    .ticket-subject p{
+        
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        
+    }
 
 }
