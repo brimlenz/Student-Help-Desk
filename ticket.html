@@ -72,38 +72,78 @@
                 <div class="form-outline contents">
                     <label class="form-label" for="Faculty">Faculty</label>
                     <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
-                    <select class="form-select" aria-label="Default select example" required>
+                    <select id="faculty" onchange="enableDepartment(this)" class="form-select" aria-label="Default select example" required>
                         <option value="" disabled selected hidden>Select your Faculty</option>
-                        <option value="1">Computing and Information Technology</option>
-                        <option value="2">Engineering and Technology</option>
-                        <option value="3">Science and Technology</option>
-                        <option value="4">Business and Economics</option>
-                        <option value="5"> Media and Communication</option>
+                        <option value="FOCIT">Computing and Information Technology</option>
+                        <option value="FOET">Engineering and Technology</option>
+                        <option value="FOST">Science and Technology</option>
+                        <option value="FOBE">Business and Economics</option>
+                        <option value="FAMECO"> Media and Communication</option>
                       </select>
                 </div>
 
-                <div class="form-outline contents">
-                    <label class="form-label" for="Department">Department</label>
-                    <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+                
+
+                    <div id="focit"  class="form-outline contents d-none">
+                      <label class="form-label" for="Department">Department</label>
+                      <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+
                     <select class="form-select" aria-label="Default select example" required>
                         <option value="" disabled selected hidden>Select your Department</option>
-                        <option value="1" class="FOCIT">Information Technology</option>
-                        <option value="2" class="FOCIT" >Computer Science</option>
-                        <option value="3" class="FOET">Electrical & Communication Engineering</option>
-                        <option value="4" class="FOET">Civil Engineering</option>
-                        <option value="5" class="FOET">Mechanical & Mechatronics Engineering</option>
-                        <option value="6" class="FOST">Chemistry</option>
-                        <option value="7" class="FOST">Mathematics</option>
-                        <option value="8" class="FOST">Physics</option>
-                        <option value="9" class="FOBE">Finance & Accounting</option>
-                        <option value="10" class="FOBE">Marketing & Management</option>
-                        <option value="11" class="FOBE">Procurement & Logistics Management</option>
-                        <option value="12" class="FAMECO">Journalism & Communication</option>
-                        <option value="13" class="FAMECO">Film Production & Broadcasting</option>
-                      </select>
-                </div>
+                        <option  value="1 ">Information Technology</option>
+                        <option  value="2 " >Computer Science</option>
+                    </select>
+                    </div>
 
-                <div class="form-outline contents">
+
+                    <div id="foet" class="form-outline contents  d-none">
+                      <label class="form-label" for="Department">Department</label>
+                      <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+                    <select  class="form-select " aria-label="Default select example" required>
+                      <option value="" disabled selected hidden>Select your Department</option>
+                        <option  value="1 " >Electrical & Communication Engineering</option>
+                        <option  value="2 " >Civil Engineering</option>
+                        <option  value="3 " >Mechanical & Mechatronics Engineering</option>
+                    </select>
+                    </div>
+
+                    <div  id="fost" class="form-outline contents  d-none">
+                      <label class="form-label" for="Department">Department</label>
+                      <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+                    <select class="form-select " aria-label="Default select example" required>
+                      <option value="" disabled selected hidden>Select your Department</option>
+                        <option  value="1" >Chemistry</option>
+                        <option  value="2" >Mathematics</option>
+                        <option  value="3" >Physics</option>
+                    </select>
+                    </div>
+
+
+                    <div   id="fobe"class="form-outline contents  d-none">
+                      <label class="form-label" for="Department">Department</label>
+                      <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+
+                    <select class="form-select" aria-label="Default select example" required>
+                      <option value="" disabled selected hidden>Select your Department</option>
+                        <option  value="1" >Finance & Accounting</option>
+                        <option value="2" >Marketing & Management</option>
+                        <option value="3" >Procurement & Logistics</option>
+                    </select>
+                    </div>
+
+                    <div id="fameco" class="form-outline contents  d-none">
+                      <label class="form-label" for="Department">Department</label>
+                      <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Please select Your Faculty"></i>
+                     <select  class="form-select " aria-label="Default select example" required>
+                      <option value="" disabled selected hidden>Select your Department</option>
+                        <option value="1" >Journalism & Communication</option>
+                        <option  value="2" >Film Production & Broadcasting</option>
+
+                      </select>
+                    </div>
+                
+
+                <div class="form-outline contents ">
                     <label class="form-label" for="Subject">Subject</label>
                     <i class="fas fa-exclamation-circle trailing" data-toggle="tooltip" data-placement="top" title="Write the subject of your request Maximum 20 words"></i>
                     <input type="text" id="subject" class="form-control form-icon-trailing" placeholder="e.g Issues Accessing My Portal" />
@@ -176,7 +216,69 @@
    
    
  </script>
- <!--Department-->
- 
+ <!--Enable Department with respect to the Faculty-->
+ <script>
+ function enableDepartment(answer)
+ {
+   console.log(answer.value);
+   
+   if (answer.value=='FOCIT'){
+    document.getElementById('focit').classList.remove('d-none');
+    
+    document.getElementById('foet').classList.add('d-none');
+    document.getElementById('fost').classList.add('d-none');
+    document.getElementById('fobe').classList.add('d-none');
+    document.getElementById('fameco').classList.add('d-none');
+   }
+   else if(answer.value=='FOET'){
+    document.getElementById('foet').classList.remove('d-none');
+
+    document.getElementById('focit').classList.add('d-none');
+    document.getElementById('fost').classList.add('d-none');
+    document.getElementById('fobe').classList.add('d-none');
+    document.getElementById('fameco').classList.add('d-none');
+   }
+   else if(answer.value=='FOST'){
+    document.getElementById('fost').classList.remove('d-none');
+
+    document.getElementById('focit').classList.add('d-none');
+    document.getElementById('foet').classList.add('d-none');
+    document.getElementById('fobe').classList.add('d-none');
+    document.getElementById('fameco').classList.add('d-none');
+   }
+   else if(answer.value=='FOBE'){
+    document.getElementById('fobe').classList.remove('d-none');
+
+    document.getElementById('focit').classList.add('d-none');
+    document.getElementById('foet').classList.add('d-none');
+    document.getElementById('fost').classList.add('d-none');
+    document.getElementById('fameco').classList.add('d-none');
+   }
+
+   else if(answer.value=='FAMECO'){
+    document.getElementById('fameco').classList.remove('d-none');
+
+    document.getElementById('focit').classList.add('d-none');
+    document.getElementById('foet').classList.add('d-none');
+    document.getElementById('fost').classList.add('d-none');
+    document.getElementById('fobe').classList.add('d-none');
+   }
+   
+   
+   else{
+    document.getElementById('focit').classList.add('d-none');
+    document.getElementById('foet').classList.add('d-none');
+    document.getElementById('fost').classList.add('d-none');
+    document.getElementById('fobe').classList.add('d-none');
+    document.getElementById('fameco').classList.add('d-none');
+   }
+
+  
+
+   
+
+
+ }
+ </script>
   </body>
 </html>
