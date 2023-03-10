@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="issues.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+  <div class="main-container d-flex">
+    <div class="sidebar" id="side_nav">
+      <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-betweeen">
+        <img src="logos/user.png" width="30" height="30" alt="logo" class="d-inline-block align-text-top m-1">
+         <h1 class="fs-4 text-light d-inline-block align-text-top px-2">Help Desk</h1>
+         <button class="btn-close d-md-none d-inline-block justify-end close-btn px-1 py-0 text-light justify-content-betweeen ms-5"> <i class="fa fa-times" aria-hidden="true"></i></button>
+         
+      </div>
+
+      <ul class="list-unstyled px-2">
+        <li class="active"><a href="index.html" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-house-user"></i> Dashboard</a></li>
+        <li class=""><a href="ticket.html" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-ticket"></i> Submit a Request</a></li>
+        <li class=""><a href="requests.html" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-list-ul"></i> All Requests</a></li>
+        <li class=""><a href="#How to Submit a Ticket" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-compass"></i> How to Submit a Request</a></li>
+        <li class=""><a href="guides.html" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-clipboard-question"></i> FAQ's</a></li>
+        
+        
+      </ul>
+
+      <hr class="h-color mx-2 ">
+
+      <ul class="list-unstyled px-2">
+        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block active"> <i class="fa fa-line-chart" aria-hidden="true"></i> Reports</a></li>
+        <li class=""><a href="#Settings" class="text-decoration-none px-3 py-2 d-block"> <i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+        <li class=""><a href="#Logout" class="text-decoration-none px-3 py-2 d-block"> <i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+      </ul>
+      
+    
+    </div> 
+    <div class="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between d-md-none d-block">
+          <a class="navbar-brand fs-4" href="#">Help Desk</a>
+          <button class="btn px-1 py-0 open-btn"> <i class="fa fa-bars" aria-hidden="true"></i> </button>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="dashboard-content">
+        <!-- heading-->
+        <h3 class="i-subject">Missing marks</h3>
+        <p class="ticket-id"> Request #18927</p>
+        
+        
+        <div class="board">
+          <div class="row-fluid d-flex">
+            <div class="col-sm-8">
+                <ul class="comment-list d-block" id="comments">
+                    <li class="comment request-comment">
+                        <div class="comment-content d-block">
+                            <div class="entry-info">
+                                <div class="entry-info-avatar">
+                                    <img src="logos/user.png" width="42" height="42" alt="">
+                                </div>
+                                <div class="entry-info-content d-block">
+                                    <b class="entry-info-author">
+                                        <a href="#" class="ms-1">BRIAN NJERU</a>
+                                    </b>
+                                     <div class="meta ms-1">
+                                        <time datetime="2023-01-08T16:09:39Z" title="2023-01-08 19:09" data-datetime="calendar">January 08, 2023 19:09</time>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="comment-body">
+                                <div class="zd-comment" dir="auto">
+                                    <p dir="auto">
+                                        I am writing to report that I have noticed some missing marks on my academic record. As a dedicated student who takes my education seriously, I believe it is important to bring this matter to your attention.
+
+                                        I have gone through my transcripts and noticed that there are some assignments, tests, and projects that I have completed, but the corresponding grades have not been recorded. As you can imagine, this has caused me some concern, as these missing marks could have a significant impact on my overall grades.
+                                    </p>
+                                </div>
+                                <ul class="list-unstyled attachement-list">
+                                    <li class="attachment-list-item">
+                                        <a href="#" class="btn btn-default">
+                                            <span class="fas fa-paperclip attachment-list__icon">
+                                            </span>
+                                            <span>Screenshot (50).png</span>
+                                            <span class="meta">(300 KB)</span>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="comment-list d-block" id="comments">
+                    <li class="comment request-comment">
+                        <div class="comment-content d-block">
+                            <div class="entry-info">
+                                <div class="entry-info-avatar">
+                                    <img src="logos/user.png" width="42" height="42" alt="">
+                                </div>
+                                <div class="entry-info-content d-block">
+                                    <b class="entry-info-author">
+                                        <a href="#" class="ms-1">DAVID</a>
+                                    </b>
+                                    <div class="community-badge ⚜️-support-agent " style="background-color: rgb(41, 205, 156);">⚜️ Support Agent</div>
+                                    <div class="meta ms-1">
+                                        <time datetime="2023-01-08T16:09:39Z" title="2023-01-08 19:09" data-datetime="calendar">January 08, 2023 32:09</time>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="comment-body">
+                                <div class="zd-comment" dir="auto">
+                                    <p dir="auto">
+                                        Thank you for bringing this matter to our attention. We understand the importance of accurate and up-to-date academic records, and we are committed to resolving this issue for you as soon as possible.
+
+                                        To ensure that we can address your concern effectively, we will need more information about the specific missing marks that you have noticed. Could you please provide us with the following details?
+
+                                        The names of the assignments, tests, and projects that are missing grades
+                                        The dates that these assignments were due or completed
+                                        The names of the teachers who were responsible for grading these assignments
+                                        Once we have this information, we will investigate the matter and work with your teachers to ensure that all missing grades are recorded accurately in your academic record. We will also provide you with regular updates on the progress of this matter so that you are aware of any developments.
+
+                                        Thank you for your cooperation in this matter. We appreciate your dedication to your education and are committed to ensuring that your academic record is reflective of your hard work and achievements. </p>
+                                </div>
+                                <ul class="list-unstyled attachement-list">
+                                    <li class="attachment-list-item">
+                                        <a href="#" class="btn btn-default">
+                                            <span class="fas fa-paperclip attachment-list__icon">
+                                            </span>
+                                            <span>Screenshot (50).png</span>
+                                            <span class="meta">(300 KB)</span>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="request-sidebar">
+                    <p>
+                        BRIAN NJERU submitted this request
+                    </p>
+                    <dl class="request-details">
+                        <dt>Registration Number</dt>
+                        <dd>
+                            <span>CIT-222-006/2019</span>
+                        </dd>
+                        <dt>Faculty</dt>
+                        <dd>
+                            <span>Computing Information Technology</span>
+                        </dd>
+                        <dt>Department</dt>
+                        <dd>Finance</dd>
+                        <dt>Status</dt>
+                        <dd>
+                            <span class="request-status request-status--solved" title="This request has been solved">
+                                Solved
+                              </span>
+                        </dd>
+                        <dt>Priority</dt>
+                        <dd> <span class="priority-status priority-status--urgent" title="This request is being solved">
+                            urgent
+                          </span>
+                        </dd>
+                        <dt>Assigned to:</dt>
+                        <dd>
+                            <span>David</span>
+                        </dd>
+                        
+                          <ul class="list-unstyled attachement-list">
+                            <li class="attachment-list-item">
+                                <a href="#" class="btn btn-default">
+                                    <span class="fas fa-paperclip attachment-list__icon">
+                                    </span>
+                                    <span>Screenshot (50).png</span>
+                                    <span class="meta">(300 KB)</span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </dl>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ff7fc15562.js" crossorigin="anonymous"></script>
+
+    <!--Script for the sidebar-->
+<script>
+  sidebar = document.querySelector(".sidebar").querySelectorAll("li");
+  console.log(sidebar);
+  sidebar.forEach(element => {
+   element.addEventListener("click", function(){
+     sidebar.forEach(sidebar=>sidebar.classList.remove("active"))
+     this.classList.add("active")
+   })
+  });
+  
+   $('.open-btn').on('click', function(){
+     $('.sidebar').addClass('active');
+   });
+   $('.close-btn').on('click', function(){
+     $('.sidebar').removeClass('active');
+   })
+   
+   
+ </script>
+  </body>
+</html>
